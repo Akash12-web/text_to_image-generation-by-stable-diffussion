@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stable Diffusion Web App</title>
+</head>
+<body>
+    <h2>Stable Diffusion Image Generator</h2>
+    <form method="POST">
+        <label>Enter a text prompt:</label><br>
+        <input type="text" name="prompt" style="width:300px;" required><br><br>
+        <button type="submit">Generate Image</button>
+    </form>
+
+    {% if image_path %}
+        <h3>Generated Image for: "{{prompt}}"</h3>
+        <img src="{{ image_path }}" width="400">
+    {% endif %}
+</body>
+</html>
